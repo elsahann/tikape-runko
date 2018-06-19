@@ -11,7 +11,8 @@
 
         <ul>
             <li th:each="annos: ${annokset}">
-                <a href="/${annos.nimi}"><span th:text="${annos.nimi}">Smoothienimi</span></a>
+                <a href="/${annos.id}">
+                    <span th:text="${annos.nimi}">Smoothienimi</span></a>
             </li>
         </ul>
         

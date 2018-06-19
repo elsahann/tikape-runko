@@ -11,9 +11,11 @@
         <p> Listalla olevat annokset</p>
         <ul>
             <li th:each="annos: ${annokset}">
-                <a href="/${annos.nimi}"><span th:text="${annos.nimi}">Smoothienimi</span></a>
+                <a href="/${annos.id}">
+                    <span th:text="${annos.nimi}">Smoothienimi</span></a>
             </li>
         </ul>
+        
         
         <h2> Lisää uusi</h2>
         <form method="POST" action="/annokset">
@@ -21,16 +23,20 @@
             <input type="submit" value="Lisää"/>
         </form>
         
+        
+        
+        
+        
         <h2>Lisää raaka-aineet annokseen</h2>
         
-        
+        <form th:action="@{~/annokset/{id}(id=${annosId})}" method="post"> 
             <p> Smoothien nimi </p>
             <select name="smoothie">
                 <option th:each="annos: ${annokset}" th:value="${annos.id}" th:text="${annos.nimi}">
                 annos
                 </option>
             </select>
-        <form th:action="@{~/annokset/{id}(id=${annos.id})}" method="post">    
+           
             <p> Lisää ainesosa </p>
             <select name="ainesosa">
                 <option th:each="raakaAine: ${raakaAineet}" th:value="${raakaAine.id}" th:text="${raakaAine.nimi}">
