@@ -1,4 +1,4 @@
-# tikape-runko
+# Smoothie arkisto
 
-Tietokantojen perusteet -kurssilla tehtävän web-sovelluksen pohja.
+Tietokantojen perusteet -kurssilla tehty harjoitustyö smoothieiden lisäämiskeksi arkistoon. 
 
